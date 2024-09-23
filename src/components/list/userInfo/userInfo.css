@@ -1,0 +1,29 @@
+.userInfo {
+    padding: 15px;  /* Reduced padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 15px;  /* Reduced gap */
+
+        img {
+            width: 40px;  /* Reduced size */
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .icons {
+        display: flex;
+        gap: 15px;  /* Reduced gap */
+
+        img {
+            width: 16px;  /* Reduced size */
+            height: 16px;
+        }
+    }
+}

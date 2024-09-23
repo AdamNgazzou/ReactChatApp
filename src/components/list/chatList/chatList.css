@@ -1,0 +1,91 @@
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;  /* Reduced scrollbar width */
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;  /* Reduced border radius */
+    background-color: rgba(0, 0, 0, .4);  /* Slightly lighter */
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.chatList {
+    flex: 1;
+    overflow-y: scroll;
+    
+
+    .search {
+        display: flex;
+        align-items: center;
+        gap: 15px;  /* Reduced gap */
+        padding: 15px;  /* Reduced padding */
+
+        .searchBar {
+            flex: 1;
+            background: rgba(17, 25, 40, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 15px;  /* Reduced gap */
+            border-radius: 8px;  /* Reduced border radius */
+            padding: 8px;  /* Reduced padding */
+
+            input {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: white;
+                flex: 1;
+                font-size: 14px;  /* Reduced font size */
+            }
+
+            img {
+                width: 15px;  /* Reduced size */
+                height: 15px;
+            }
+        }
+
+        .add {
+            width: 30px;  /* Reduced size */
+            height: 30px;
+            background-color: rgba(17, 25, 40, 0.5);
+            padding: 8px;  /* Reduced padding */
+            border-radius: 8px;  /* Reduced border radius */
+            cursor: pointer;
+        }
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        gap: 15px;  /* Reduced gap */
+        padding: 15px;  /* Reduced padding */
+        cursor: pointer;
+        border-bottom: 1px solid #dddddd35;
+        &:hover{
+            backdrop-filter: blur(50px) saturate(200%);
+        }
+
+        img {
+            width: 40px;  /* Reduced size */
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .texts {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;  /* Reduced gap */
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 14px;  /* Reduced font size */
+        }
+
+        p {
+            font-size: 12px;  /* Reduced font size */
+            font-weight: 300;
+        }
+    }
+}
