@@ -184,13 +184,19 @@ const Chat = () => {
 
 
     return (
-        <div className='chat' style={{ display: (((chatorchatlist || !mediaQuery.matches) || !ShowDetail)) ? 'flex' : 'none' }}>
-            <div className="top">
+        <div className='chat' style={{ display: (((chatorchatlist || !mediaQuery.matches) && (!ShowDetail || !mediaQuery.matches))) ? 'flex' : 'none' }}>
+            <img
+                src="./arrowDown.png"
+                style={{ height: '15px', width: '15px', transform: 'rotate(90deg)', position: 'absolute', top: '30px', left: '15px' }}
+                onClick={() => setChatorchatlist(!chatorchatlist)}
+            />
+            <div className="top" style={{ paddingLeft: '13%' }}>
+
                 <div className="user">
                     <img src={user?.avatar || "./avatar.png"} alt="" />
                     <div className="texts">
                         <span>{user?.username || "Unknown User"}</span>
-                        <p>her i am adam ngazzou</p>
+                        <p style={{ display: !mediaQuery.matches ? 'flex' : 'none' }}>her i am adam ngazzou</p>
                     </div>
                 </div>
                 <div className="icons">
