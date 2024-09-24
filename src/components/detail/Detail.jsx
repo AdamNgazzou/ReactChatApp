@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import './Detail.css';
 import { auth, db } from '../../lib/firebase';
@@ -121,6 +122,11 @@ const Detail = () => {
 
     return (
         <div className='detail' style={{ display: ShowDetail ? 'flex' : 'none' }}>
+            <img
+                src="./arrowDown.png"
+                style={{ height: '20px', width: '20px', transform: 'rotate(90deg)', position: 'absolute', top: '15px', left: '15px' }}
+                onClick={() => setShowDetail(!ShowDetail)}
+            />
             <div className="user">
                 <img src={user?.avatar || "./avatar.png"} alt="" />
                 <h3>{user?.username || "Unknown User"}</h3>
