@@ -177,5 +177,24 @@
 @media only screen and (max-width: 768px) {
     .chat{
       display:none;
+      flex:1;
+      background-color: rgb(17,25,40,0.75);
+      backdrop-filter: blur(19px) saturate(180%);
+      height: 100%;
+      overflow-y:hidden;
+
     }
+    audio{
+        width:250px;
+    }
+    input{
+        width:150px;
+        padding:12px;
+        font-size: 12px;  
+
+    }
+
   }
+
+
+  
